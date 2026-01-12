@@ -3,7 +3,7 @@ const fs = require('fs'); // fs é para file system, permitindo ler e gravar arq
 
 // Listas de opçoes - podemos ir atualizando ela aos poucos
 const tecnica = ["Aquarela", "Grafite", "Colagem", "Pintura"];
-const temas = ["Fantasia", "Natureza", "Cotidiano", "Vida urbana", "Sobrenatural"];
+const tema = ["Fantasia", "Natureza", "Cotidiano", "Vida urbana", "Sobrenatural"];
 const elemento = ["Copo", "Gato", "Dragão", "Janela"];
 
 const today = new Date().toISOString().split("T")[0];
