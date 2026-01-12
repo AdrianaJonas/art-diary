@@ -5,7 +5,7 @@ fetch("data/challenges.json")
 
         const today = data[data.length - 1];
 
-        const formatedDate = today.date.replaceAll('-', '/');
+        const formatedDate = today.date.split('-').reverse().join('/');
         document.getElementById("data").innerHTML = formatedDate;
 
         document.getElementById("today").innerHTML = `
