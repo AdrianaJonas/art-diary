@@ -1,1 +1,14 @@
-[{ "date": "2026-01-10", "tecnica": "Aquarela", "tema": "Natureza", "elemento": "Janela"}]
+[
+  {
+    "date": "2026-01-10",
+    "tecnica": "Aquarela",
+    "tema": "Natureza",
+    "elemento": "Janela"
+  },
+  {
+    "date": "2026-01-12",
+    "tecnica": "Grafite",
+    "tema": "Fantasia",
+    "elemento": "Gato"
+  }
+]
