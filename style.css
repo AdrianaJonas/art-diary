@@ -1,18 +1,116 @@
+.jersey-15-regular {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 body {
-  font-family: serif;
-  background: #f7f3ee;
-  color: #333;
-  padding: 2rem;
+    font-family: serif;
+    color: #333;
+    padding: 2rem;
+
+    background-image: url('assets/imgs/background.webp');
+    background-size: auto;
+    background-repeat: no-repeat;
+    vertical-align: middle;    
+}
+
+h1 {
+    text-align: center;
+    font-family: "Jersey 20", sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 3px 2px 0px #290837;
+
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: "Jersey 20", sans-serif;
 }
 
 main {
-  max-width: 600px;
-  margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;   
+
+    padding: 50px ;
+
+    background-image: url('assets/imgs/main_bg.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 section {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  background: #fff;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+#data::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    background-image: url('assets/imgs/2x/star.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+section#today, section#history{  
+    padding-top: 30px;
+    border-radius: 12px;
+    border: solid 2px #290837;    
+}
+
+section#history{
+    height: 150px;       
+    overflow-y: auto; 
+}
+
+/* Largura da barra */
+section#history::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Cor do fundo da barra */
+section#history::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 99px;
+}
+
+/* Cor do "botão" que desliza */
+section#history::-webkit-scrollbar-thumb {
+    background: #e09bf1;
+    border-radius: 10px;
+}
+
+/* Cor quando passa o mouse */
+section#history::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.action{
+    background-image: url('assets/imgs/2x/barra.webp');
+    background-size: contain;
+    background-repeat: no-repeat;    
+    height: 80px; 
+
+    margin-bottom: -30px;
+    z-index: 99;
+
+    h2{
+        margin-left: 100px;
+    }
 }

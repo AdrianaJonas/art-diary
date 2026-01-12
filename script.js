@@ -16,11 +16,14 @@ fetch("data/challenges.json")
 
         const history = document.getElementById("history");
         data.slice().reverse().forEach(day => { // slice separa os valores do data, reverse troca a ordem pois os mais recentes sao os ultimos do array
-            const div = document.createElement("div");
-            div.innerHTML = `
-                <small>${day.date}</small>
-                <p>${day.tecnica} · ${day.tema} · ${day.elemento}</p>
-            `;
-            history.appendChild(div); // appendChild adiciona sem substituir o que ja existe dentro do elemento
+            if (day.date != today.date) {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <small>${day.date}</small>
+                    <p>${day.tecnica} · ${day.tema} · ${day.elemento}</p>
+                    <hr>
+                `;
+                history.appendChild(div); // appendChild adiciona sem substituir o que ja existe dentro do elemento                
+            }
         });
     });
