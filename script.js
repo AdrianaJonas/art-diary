@@ -4,7 +4,9 @@ fetch("data/challenges.json")
         if (!data.length) return;
 
         const today = data[data.length - 1];
-        console.log(today);
+
+        const formatedDate = today.date.replaceAll('-', '/');
+        document.getElementById("data").innerHTML = formatedDate;
 
         document.getElementById("today").innerHTML = `
             <p><strong>Estilo: </strong> ${today.tecnica}</p>
@@ -17,7 +19,7 @@ fetch("data/challenges.json")
             const div = document.createElement("div");
             div.innerHTML = `
                 <small>${day.date}</small>
-                <p>${day.estilo} · ${day.tema} · ${day.elemento}</p>
+                <p>${day.tecnica} · ${day.tema} · ${day.elemento}</p>
             `;
             history.appendChild(div); // appendChild adiciona sem substituir o que ja existe dentro do elemento
         });
