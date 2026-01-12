@@ -8,9 +8,8 @@ const elemento = ["Copo", "Gato", "Dragão", "Janela"];
 
 const today = new Date().toISOString().split("T")[0];
 
-const data = JSON.parse(
-  fs.readFileSync("data/challenges.json", "utf8")
-);
+const file = "data/challenges.json";
+const data = JSON.parse(fs.readFileSync(file, "utf8"));
 
 if (data.some(d => d.date === today)) process.exit(0); // se ja existir um objeto com a mesma data, encerra o processo
 
